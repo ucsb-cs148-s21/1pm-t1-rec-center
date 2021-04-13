@@ -3,10 +3,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/hello')
+def hello():
+    return {'content' : 'Hello world!'}
+
 @app.route('/')
 def home():
-    return "<h1>Hello World!</h1>"
+    return "<h1>Hello world!<h1>"
 
-@app.route('/hello')
-def get_current_time():
-    return {'content': "Hello world!"}

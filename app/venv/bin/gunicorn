@@ -1,4 +1,4 @@
-#!/Users/andyho/Projects/rec-center/react-flask-app/api/venv/bin/python3
+#!/Users/andyho/Projects/rec-center/app/venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'gunicorn==20.1.0','console_scripts','gunicorn'
 import re
 import sys
