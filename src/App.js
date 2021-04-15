@@ -5,7 +5,7 @@ function App() {
   const [content, setContent] = useState(0);
 
   useEffect(() => {
-    fetch('/hello').then(res => res.json()).then(data => {
+    fetch('https://andy-react-flask.herokuapp.com/hello').then(res => res.json()).then(data => {
       setContent(data.content);
     });
   }, []);
@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
-        <p>{content}</p>
+        <h1>{content}</h1>
+        <p>Hello World!</p>
       </header>
     </div>
   );

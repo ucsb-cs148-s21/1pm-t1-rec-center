@@ -2,4 +2,4 @@
 
 ## Deployed:
 
-Link: https://andy-react-flask.herokuapp.com/
+Link: https://andyho-flask-hello-world.herokuapp.com/
