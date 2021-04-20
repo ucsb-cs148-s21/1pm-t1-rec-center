@@ -4,9 +4,9 @@ Mentor: Jayleen Li
 
 Meeting Time: 04-20-21
 
-Type of meeting: Daily scrum
+Type of meeting: daily scrum
 
-Team: Billy Wu ✓, Bryan Xu ✓, Andy Ho ✓, Alejandro Rodriguiz ✓, Silvia Yu ✓,
+Team: Silvia Yu ✓, Billy Wu ✓, Bryan Xu ✓, Andy Ho ✓, Alejandro Rodriguiz ✓
 
 Bryan - Watching tutorials on API.
 
