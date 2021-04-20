@@ -18,4 +18,3 @@ Alejandro - Finished homework 3. Working on a nav bar for the user story I was a
 
 Silvia - Watching tutorials on JS.
 
-Retro leader next week: 
