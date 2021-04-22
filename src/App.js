@@ -5,7 +5,7 @@ function App() {
   const [content, setContent] = useState(0);
 
   useEffect(() => {
-    fetch('https://andy-react-flask.herokuapp.com/hello').then(res => res.json()).then(data => {
+    fetch('/hello').then(res => res.json()).then(data => {
       setContent(data.content);
     });
   }, []);
