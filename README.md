@@ -35,6 +35,10 @@ venv/Scripts/activate (Windows)
 ```
 npm build
 ```
+or
+```
+yarn build
+```
 
 ### Launch
 
@@ -42,9 +46,17 @@ npm build
 ```
 npm start-api
 ```
+or
+```
+yarn start-api
+```
 - Run the following from the same path but from another terminal (simultaneously)
 ```
 npm start
+```
+or
+```
+yarn start
 ```
 You should be able to see the app now.
 
