@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import Home from './view/Home';
 import About from './view/About';
 import Activity from './view/Activity';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
 		</Switch>
 	</BrowserRouter>
     <div>
-      <Day />
     </div>
 	</>
   );
