@@ -35,7 +35,7 @@ const Day = () => {
             for(const dataObj of res.data.analysis.day_raw){
                 timeData.push(parseInt(dataObj))
             } 
-            rotateRight(timeLabels, 6);
+            rotateRight(timeLabels, 18);
             setChartData({
                 labels: timeLabels,
                 datasets: [
