@@ -11,7 +11,7 @@ class Activity extends Component {
     render() { 
         return (
             <div className='App-header'>
-                <h1 className="text-center fixed-top mb-5 mt-5 font-weight-bold">Recreation Center Activity</h1>
+                <h1 className="text-center mb-5 font-weight-bold">Recreation Center Activity</h1>
                 <div className="w-75 h-75">
                 <CardGroup style={{ display: 'flex', flexDirection: 'row'}}>
                     <Card border='dark' text='white' bg="dark">
