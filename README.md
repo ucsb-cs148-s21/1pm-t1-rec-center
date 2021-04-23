@@ -1,4 +1,4 @@
-# rec-center
+# [rec-center](https://t1-rec-center.herokuapp.com/)
 
 A simple web app that tracks the traffic at the rec-center. 
 Intended users are UCSB students.
