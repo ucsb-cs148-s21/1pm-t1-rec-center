@@ -1,27 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './components/Layout';
+import React, { useEffect } from 'react';
+import AppRoute from './utils/AppRoute';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 
+// Layout
+import Layout from './components/Layout';
+
+// View
+import Home from './view/Home';
+import About from './view/About';
+
 function App() {
-  const [content, setContent] = useState(0);
 
   useEffect(() => {
     fetch('/hello').then(res => res.json()).then(data => {
-      setContent(data.content);
+      console.log(data.content);
     });
   }, []);
 
   return (
-	<>
-		<Layout>
-			<div className="App">
-			  <header className="App-header">
-				<h1>{content}</h1>
-				<p>Hello World!</p>
-			  </header>
-			</div>
-		</Layout>
-	</>
+	<BrowserRouter>
+		<Switch>
+			<AppRoute exact path="/" component={Home} layout={Layout} />
+			<AppRoute path="/about" component={About} layout={Layout} />
+		</Switch>
+	</BrowserRouter>
   );
 }
 
