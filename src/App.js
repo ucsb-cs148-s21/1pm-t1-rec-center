@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Layout from './components/Layout';
 import './App.css';
 
 function App() {
@@ -11,12 +12,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{content}</h1>
-        <p>Hello World!</p>
-      </header>
-    </div>
+	<>
+		<Layout>
+			<div className="App">
+			  <header className="App-header">
+				<h1>{content}</h1>
+				<p>Hello World!</p>
+			  </header>
+			</div>
+		</Layout>
+	</>
   );
 }
 
