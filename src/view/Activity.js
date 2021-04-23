@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Day from './components/Day';
+import Day from './../components/Day';
 import { Card } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import './Activity.css'
