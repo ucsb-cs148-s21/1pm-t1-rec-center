@@ -40,7 +40,7 @@ const Day = () => {
                 labels: timeLabels,
                 datasets: [
                     {
-                        label: 'Occupancy level',
+                        label: 'Daily Forecast',
                         data: timeData,
                         backgroundColor: [
                             'rgba(54, 162, 235, 0.2)'

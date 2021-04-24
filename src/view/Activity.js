@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Now from './../components/Now';
 import Day from './../components/Day';
 import { Card } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
@@ -17,7 +18,8 @@ class Activity extends Component {
                     <Card border='dark' text='white' bg="dark">
                     <Card.Title className="text-center mt-4 mb-1 font-weight-bold">Hourly Forecast</Card.Title>
                         <Card.Body>
-                            <Day/>
+                            <Now />
+                            <Day />
                         </Card.Body>
                     </Card>
                 </CardGroup>

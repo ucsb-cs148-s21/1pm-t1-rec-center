@@ -8,7 +8,7 @@ var params = {
 
 export default class Now extends React.Component {
     state = {
-        times: [],      
+        times: 0,      
     };    
 
     componentDidMount() {
@@ -19,6 +19,6 @@ export default class Now extends React.Component {
     }
 
     render() {
-        return <ul>{this.state.times}</ul>;
+        return <h1>Current Occupancy level: {this.state.times}</h1>;
     }
 }
