@@ -4,15 +4,15 @@ import {MenuItems} from "./MenuItem"
 import './Navbar.css'
 
 
-class Navbar extends Component{
+class Navbar extends Component {
     state = {on: false}
 
     handleClick = () => {
         this.setState({on: !this.state.on})
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <nav className="NavbarItems">
                 <h1 className="navbar-logo">Rec Cen<i className="fas fa-dumbbell"></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
