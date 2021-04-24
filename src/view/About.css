@@ -1,0 +1,16 @@
+.aboutpage {
+    margin: 0 1em;
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.aboutpage h1 {
+    text-align: center;
+}
+
+.aboutpage h6 {
+    margin: 1em 2em 0em 2em;
+}
+
+.aboutpage p {
+    margin: 0em 2em;
+}
