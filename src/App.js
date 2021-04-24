@@ -7,6 +7,8 @@ import Day from './components/Day'
 import Layout from './components/Layout';
 import Home from './view/Home';
 import About from './view/About';
+import Activity from './view/Activity';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
@@ -15,10 +17,10 @@ function App() {
 		<Switch>
 			<AppRoute exact path="/" component={Home} layout={Layout} />
 			<AppRoute path="/about" component={About} layout={Layout} />
+			<AppRoute path="/activity" component={Activity} layout={Layout} />
 		</Switch>
 	</BrowserRouter>
     <div>
-      <Day />
     </div>
 	</>
   );
