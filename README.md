@@ -75,6 +75,10 @@ You should be able to see the app now.
 - database - MongoDB
 - api - BestTime
 
+## user roles
+- students looking to work out at the rec cen
+- administrators that set if the rec cen is currently closed/on holiday
+
 ## leadership roles
 - Product Manager: Andy Ho
 - Scrum Master: Bryan Xu
