@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import AppRoute from './utils/AppRoute';
 import { BrowserRouter, Switch } from 'react-router-dom';
@@ -23,6 +24,17 @@ function App() {
     <div>
     </div>
 	</>
+=======
+import React from 'react';
+import Navbar from "./components/Navbar/Navbar";
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+>>>>>>> da13fb2cde0ad239ba863acfd49486b6ad1e1e8a
   );
 }
 

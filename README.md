@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [rec-center](https://t1-rec-center.herokuapp.com/)
 
 A simple web app that tracks the traffic at the rec-center. 
@@ -59,6 +60,11 @@ or
 yarn start
 ```
 You should be able to see the app now.
+=======
+# Deployment (Front-end):
+
+https://reccennavbar.herokuapp.com/
+>>>>>>> da13fb2cde0ad239ba863acfd49486b6ad1e1e8a
 
 ## members
 
