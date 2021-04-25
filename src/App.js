@@ -11,13 +11,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 function App() {
   return (
 	<>
-	<BrowserRouter>
-		<Switch>
-			<AppRoute exact path="/" component={Home} layout={Layout} />
-			<AppRoute path="/about" component={About} layout={Layout} />
-			<AppRoute path="/activity" component={Activity} layout={Layout} />
-		</Switch>
-	</BrowserRouter>
+		<BrowserRouter>
+			<Switch>
+				<AppRoute exact path="/" component={Home} layout={Layout} />
+				<AppRoute path="/about" component={About} layout={Layout} />
+				<AppRoute path="/activity" component={Activity} layout={Layout} />
+			</Switch>
+		</BrowserRouter>
 	</>
   );
 }
