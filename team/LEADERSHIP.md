@@ -8,3 +8,4 @@
 | Thur 04/15 | Alejandro Rojas Rodriguez       | Led leadership & learning discussion                                  |
 | Fri 04/16 | Billy Wu       | Led daily scrum meeting + lab02 update                                  |
 | Tues 04/20 | Silvia Yu       | Led retrospective                                  |
+| Thurs 04/22 | Bryan Xu       | Led daily scrum meeting                                  |
