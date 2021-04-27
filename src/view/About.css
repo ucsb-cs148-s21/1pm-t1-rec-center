@@ -1,16 +1,31 @@
 .aboutpage {
-    margin: 0 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    max-width: 60%;
+    min-width: 500px;
+    height: 550px;
     background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 20px;
+    border: blue;
+    border-width: 10px;
 }
 
 .aboutpage h1 {
+    padding-top: 30px;
     text-align: center;
 }
 
 .aboutpage h6 {
+    padding-bottom: 1px;
+    font-weight: bold;
     margin: 1em 2em 0em 2em;
 }
 
 .aboutpage p {
     margin: 0em 2em;
+}
+
+.aboutContent {
+    padding-top: 10px;
 }
