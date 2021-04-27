@@ -1,9 +1,25 @@
-.App-header {
-    background-color: #282c34;
+div.App-header {
+    opacity: .8;
+    background-color: rgba(240, 240, 240, 0.8);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+
+  .card {
+    background-color: rgba(240, 240, 240, 0.85)!important;
+    border-radius: 20px!important;
+  }
+
+  .occupancy {
+    font-weight: bold;
+    font-size: 65%;
+    margin: .5em;
   }
