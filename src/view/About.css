@@ -1,6 +1,7 @@
 .aboutpage {
     margin: 0 1em;
     background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 25px;
 }
 
 .aboutpage h1 {
