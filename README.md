@@ -11,9 +11,16 @@ Intended users are UCSB students.
 
 ## Getting Started
 
-### Requirements
+### Prerequisites
 
 - Before you start, you need to have `Node.js` `npm/yarn` `python` ready. 
+
+### Dependencies
+
+- React: to run the app properly
+- Axios: to make API calls to BestTime API
+- Animate.css: to add animations to the web app
+- chart.js: create nice chart to display information from API
 
 ### Installation
 
@@ -59,6 +66,18 @@ or
 yarn start
 ```
 You should be able to see the app now.
+
+## Functionality
+---
+Homepage: Introduction to the functionalities of the web app
+About: About us page for the members of the team that worked on the web app
+Activity: Page that shows the predicted occupancy level of the rec cen
+Hours: Page that lists the regular hours of the recreation center
+
+## Known Problems
+---
+None at the moment
+
 
 ## members
 
