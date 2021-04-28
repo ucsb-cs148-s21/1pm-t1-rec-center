@@ -69,10 +69,10 @@ You should be able to see the app now.
 
 ## Functionality
 ---
-Homepage: Introduction to the functionalities of the web app
-About: About us page for the members of the team that worked on the web app
-Activity: Page that shows the predicted occupancy level of the rec cen
-Hours: Page that lists the regular hours of the recreation center
+- Homepage: Introduction to the functionalities of the web app
+- About: About us page for the members of the team that worked on the web app
+- Activity: Page that shows the predicted occupancy level of the rec cen
+- Hours: Page that lists the regular hours of the recreation center
 
 ## Known Problems
 ---
