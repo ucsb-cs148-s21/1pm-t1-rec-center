@@ -4,9 +4,9 @@ import './About.css'
 const About = () => {
 
   return (
-	<>
 	<div class="aboutpage animate__animated animate__slower animate__fadeIn"> 
 		<h1>About us</h1>
+		<div className='aboutContent'>
 		<h6>Andy</h6>
 		<p>Hello everyone, my name is Andy. I'm a third year CS major and some of my interests include video games, cars, and being outdoors.</p>
 		<h6>Alejandro</h6>
@@ -17,8 +17,8 @@ const About = () => {
 		<p>Hi! My name is Bryan. I'm a third year CS student, and my interests outside of coding include Smash, anime, and badminton. I was previously a ULA for CS16, and I'm looking forward to working together!</p>
 		<h6>Silvia</h6>
 		<p>Hi everyone, my name is Silvia Yu. I'm a third year Computer Science major. My interests outside of coding are playing escape rooms and watching anime.</p>
+		</div>
 	</div>
-	</>
   );
 }
 
