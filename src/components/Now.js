@@ -19,6 +19,6 @@ export default class Now extends React.Component {
     }
 
     render() {
-        return <div>Current Occupancy Level: {this.state.times}</div>;
+        return <div>Current Occupancy Level: {this.state.times}%</div>;
     }
 }
