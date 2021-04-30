@@ -11,3 +11,4 @@
 | Thurs 04/22 | Bryan Xu       | Led daily scrum meeting                                  |
 | Tues 04/27 | Alejandro Rojas Rodriguez         | Led daily scrum meeting                                  |
 | Thur 04/29| Andy Ho     | Led daily scrum meeting                      | 
+| Thur 04/29| Bryan Xu    | Led sprint planning                      | 
