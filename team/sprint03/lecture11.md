@@ -4,7 +4,7 @@ Mentor: Jayleen Li
 
 Meeting Time: 05-06-21
 
-Type of meeting: daily scrum
+Type of meeting: sprint planning
 
 Team: Silvia Yu ✓, Billy Wu ✓, Bryan Xu ✓, Andy Ho ✓, Alejandro Rodriguiz ✓
 
@@ -17,3 +17,5 @@ Andy - Watched videos for Flask crowd operations
 Alejandro - Prepared a list of videos for Flask
 
 Silvia - Finished the homework
+
+Made kanban board
