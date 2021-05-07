@@ -8,8 +8,10 @@
 Goal
 * Make sure everyone knows how the web app works. 
 * Learn to use react and flask.
+
 Change
 * Providing update with more details.
+
 Measurement
 * Everyone finishes their stories by the MVP due date.
 
