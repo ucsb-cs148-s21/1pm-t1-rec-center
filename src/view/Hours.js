@@ -5,7 +5,7 @@ import './Hours.css'
 const Hours = () => {
 	return (
         <>
-                <div className="hours animate__animated animate__slower animate__fadeIn">
+                <div className="hours animate__animated animate__slower animate__fadeIn" data-testid="hours">
                     <h1>Hours</h1>
                     <div className='days'>
                     <h4><strong>REGULAR HOURS</strong></h4><br />

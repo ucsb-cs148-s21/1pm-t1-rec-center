@@ -4,7 +4,7 @@ import './About.css'
 const About = () => {
 
   return (
-	<div class="aboutpage animate__animated animate__slower animate__fadeIn"> 
+	<div className="aboutpage animate__animated animate__slower animate__fadeIn" data-testid="about"> 
 		<h1>About us</h1>
 		<div className='aboutContent'>
 		<h6>Andy</h6>
