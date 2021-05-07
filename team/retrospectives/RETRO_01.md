@@ -21,5 +21,9 @@
 * The retro assessment went well.
 * What advice would you give to the next person leading a retro based on what you learned today?
 * Have some ideas about the retro before going into discussion.
+
+## Outcome
+
+* Our communication was improved, but it could still use some more work. Everyone was efficient with completing their tasks for the MVP due date. 
  
  
