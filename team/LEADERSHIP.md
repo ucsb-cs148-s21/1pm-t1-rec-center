@@ -14,3 +14,4 @@
 | Thur 04/29| Bryan Xu    | Led sprint planning                      | 
 | Thur 05/06| Billy Wu    | Finished sprint planning                 | 
 | Thur 05/06| Andy Ho    | Led retrospective meeting                 | 
+| Tues 05/11| Silvia Yu    | Led daily scrum meeting                 | 
