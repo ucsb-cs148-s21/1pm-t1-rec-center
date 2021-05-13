@@ -1,0 +1,14 @@
+
+.link:hover {
+    background-color: rgba(240, 240, 240, 0.6);
+    border-radius: 10px;  
+    color: black;  
+}
+
+.link {
+    font-weight: bolder;
+}
+
+.topPart {
+    height: 40px;
+}

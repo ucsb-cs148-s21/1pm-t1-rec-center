@@ -1,0 +1,25 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.homepage {
+    margin: 0.5em 0.5em;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 20px;
+    border: blue;
+    padding: 2em 3em 1em 3em;
+    text-align: center;
+}
+
+.homepage h1 {
+    --animate-duration: 1.5s;
+    font-family: 'Rubik', sans-serif;
+}
+
+.homepage p {
+    margin: 1em 1em;
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;
+    list-style-position: inside;
+    display: inline-block;
+}

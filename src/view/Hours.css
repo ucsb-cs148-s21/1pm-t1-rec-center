@@ -1,0 +1,32 @@
+.hours {
+    margin: 0 1em;
+}
+
+.hours h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.hours {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    max-width: 60%;
+    min-width: 500px;
+    height: 600px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 20px;
+    border: blue;
+    border-width: 10px;
+}
+
+.hours h4 {
+    margin: 0em 1.3em;
+}
+.hours p {
+    margin: 0em 2em;
+}
+
+.days {
+    padding-top: 10px;
+}

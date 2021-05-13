@@ -1,0 +1,40 @@
+  div.App-header {
+    background-color: rgba(240, 240, 240, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+
+  div.App-header h1 {
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 4%;
+  }
+
+  div.App-header h3 {
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 3%;
+  }
+
+  .card {
+    background-color: rgba(190, 219, 247, 0.9)!important;
+    border-radius: 20px!important;
+    border-width: 0px!important;
+    width: 75%;
+  }
+
+  .occupancy {
+    font-weight: bold;
+    font-size: 55%;
+    margin: .5em;
+  }
