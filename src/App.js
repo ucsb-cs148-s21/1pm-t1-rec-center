@@ -7,8 +7,8 @@ import Home from './view/Home';
 import About from './view/About';
 import Activity from './view/Activity';
 import Hours from './view/Hours';
+import Profile from './view/Profile';
 import 'bootstrap/dist/css/bootstrap.css';
-require('dotenv').config();
 
 const App = () => {
 	const [isSignedIn, setIsSignedIn] = useState(null);
@@ -46,6 +46,7 @@ const App = () => {
 					<AppRoute path="/about" component={About} layout={Layout} />
 					<AppRoute path="/activity" component={Activity} layout={Layout} />
 					<AppRoute path="/hours" component={Hours} layout={Layout} />
+					<AppRoute path="/profile" component={Profile} layout={Layout} />
 				</Switch>
 			</BrowserRouter>
 		</>

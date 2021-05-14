@@ -23,6 +23,11 @@ const NavBar = (props) => {
 				<Nav.Item className='link'><Nav.Link href='/about'>About</Nav.Link></Nav.Item>
 				<Nav.Item className='link'><Nav.Link href='/activity'>Activity</Nav.Link></Nav.Item>
 				<Nav.Item className='link'><Nav.Link href='/hours'>Hours</Nav.Link></Nav.Item>
+				{user ? (
+					<Nav.Item className='link'><Nav.Link href='/profile'>Profile</Nav.Link></Nav.Item>
+				) : (
+					<></>
+				)}
 			</Nav>
 			<Nav>
             {!user ? (
@@ -31,9 +36,9 @@ const NavBar = (props) => {
 				<NavDropdown
 					title={
 						<span>
-							Hello, {user.Te}{" "}
+							Hello, {user.kV}{" "}
 							<img
-								src={user.EI}
+								src={user.ZJ}
 								alt="profile"
 								style={{ width: "24px", height: "24px" }}
 							/>{" "}
