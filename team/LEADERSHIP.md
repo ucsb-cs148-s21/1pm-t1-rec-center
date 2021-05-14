@@ -16,3 +16,19 @@
 | Thur 05/06| Andy Ho    | Led retrospective meeting                 | 
 | Tues 05/11| Silvia Yu    | Led daily scrum meeting                 | 
 | Thurs 05/13| Bryan Xu    | Led daily scrum meeting                 | 
+| Thurs 05/13| Alejandro Rojas Rodriguez | Led Leadership meeting |
+
+
+| Position      | Name              | 
+|-----------|-------------------|
+| Product Owner| Andy Ho     | 
+| Scrum Master | Bryan Xu  | 
+| Testing/QA Coordinator |    Billy Wu    | 
+| Retro 3 leader | Alejandro Rojas Rodriguez       |                                   
+| UX Coordinator | Andy Ho       | 
+| Design Document Coordinator | Silvia Yu       | 
+| Depolyment Document Coordinator | Alejandro Rojas Rodriguez       |
+| User Manual Coordinator | Billy Wu         | 
+| Final presentation leader| Bryan Xu     | 
+
+
