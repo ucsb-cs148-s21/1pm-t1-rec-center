@@ -27,3 +27,10 @@ A brief assessment of how it went.
 
 What advice would you give to the next person leading a retro based on what you learned today?
 * Try to ask engaging question to help encourage conversation.
+
+## Retro Outcome Assessment
+
+* Our retro 2 experiment for this retro was to communicate more through slack and continue our original workflow.
+* Everyone finishes their stories by the lab deadlines.
+* We have a few more messages sent in the slack channel in comparison to previous sprints.
+* This should be cemented as we found it to be quite productive.
