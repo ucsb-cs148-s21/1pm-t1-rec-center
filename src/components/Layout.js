@@ -1,13 +1,15 @@
 import React from 'react';
 import NavBar from './NavBar';
 
-const Layout = ({children}) => {
+const Layout = (props) => {
+	const user = props.user;
+	
 	return (
 		<>
 		<div>
-			<NavBar />
+			<NavBar user={user}/>
 		</div>
-		<main>{children}</main>
+		<main>{props.children}</main>
 		</>
 	);
 }

@@ -1,8 +1,7 @@
 import React from 'react';
-import './Home.css'
+import './Home.css';
 
 const Home = () => {
-
   return (
 	<>
 	<div className="homepage" data-testid="welcome">
