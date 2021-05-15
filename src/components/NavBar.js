@@ -36,9 +36,9 @@ const NavBar = (props) => {
 				<NavDropdown
 					title={
 						<span>
-							Hello, {user.eU}{" "}
+							Hello, {user.kV}{" "}
 							<img
-								src={user.iJ}
+								src={user.ZJ}
 								alt="profile"
 								style={{ width: "24px", height: "24px" }}
 							/>{" "}
