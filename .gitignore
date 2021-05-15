@@ -3,6 +3,7 @@ __pycache__
 venv/
 build/
 .env
+process.env
 
 .DS_STORE
 scripts/flow/*/.flowconfig

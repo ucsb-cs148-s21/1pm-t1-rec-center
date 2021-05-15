@@ -4,7 +4,7 @@ import './NavBar.css';
 
 const NavBar = (props) => {
 	const user = props.user;
-
+	console.log(user);
 	useEffect(() => {
 		if (window.gapi) {
 			window.gapi.load("signin2", () => {
@@ -36,9 +36,9 @@ const NavBar = (props) => {
 				<NavDropdown
 					title={
 						<span>
-							Hello, {user.kV}{" "}
+							Hello, {user.eU}{" "}
 							<img
-								src={user.ZJ}
+								src={user.iJ}
 								alt="profile"
 								style={{ width: "24px", height: "24px" }}
 							/>{" "}
