@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import getUser from '../utils/get-user';
 
 const AppRoute = ({
 	component: Component,
@@ -9,11 +10,13 @@ const AppRoute = ({
 	
 	Layout = (Layout === undefined) ? props => (<>{props.children}</>) : Layout;
 	
+	const user = getUser();
+	
 	return (
 		<Route
 			{...rest}
 			render = {props => (
-				<Layout>
+				<Layout user={user}>
 					<Component {...props} />
 				</Layout>
 			)} />

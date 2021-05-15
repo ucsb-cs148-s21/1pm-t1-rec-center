@@ -1,8 +1,7 @@
 import React from 'react';
-import './Home.css'
+import './Home.css';
 
 const Home = () => {
-
   return (
 	<>
 	<div className="homepage" data-testid="welcome">
@@ -11,13 +10,11 @@ const Home = () => {
 		<p className="animate__animated animate__delay-3s animate__slow animate__fadeInUp">
 			Currently, our product has the following functionalities:
 		</p>
-		<ul>
-			
+		<ul className="animate__animated animate__delay-3s animate__slow animate__fadeInUp">			
 			<li>Page containing information about recreation center hours</li>
 			<li>Page containing information about development team</li>
 			<li>Bar graph represenation for recreation center occupancy</li>
 			<li>Working navigation bar implementation</li>
-			
 		</ul>
 	</div>
 	</>

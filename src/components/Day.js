@@ -14,7 +14,7 @@ var ampm = 'am';
 if (currHour > 12){
     ampm = 'pm';
     currHour = currHour - 12;
-} else if (currHour == 0){
+} else if (currHour === 0){
     currHour = 12;
 }
 
