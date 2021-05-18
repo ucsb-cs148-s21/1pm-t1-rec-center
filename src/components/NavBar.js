@@ -17,7 +17,7 @@ const NavBar = (props) => {
 	
 	return (
 		<>
-		<Navbar expand="lg" data-testid='navbar'>
+		<Navbar className='nav' expand="lg" data-testid='navbar'>
 			<Nav className='topPart'>
 				<Nav.Item className='link'><Nav.Link href='/'>Home</Nav.Link></Nav.Item>
 				<Nav.Item className='link'><Nav.Link href='/about'>About</Nav.Link></Nav.Item>
