@@ -6,10 +6,23 @@ import { Bar } from 'react-chartjs-2';
 
 var d = new Date();
 var n = d.getDay();
+let currentDay = new Date();
+currentDay = currentDay.toDateString();
 n = (n+6) % 7;
 // n = 0-6 (monday = 0, sunday = 6)
 var chartIndex = (d.getHours() + 18) % 24;
 // 0 = 6am, 23 = 5am
+var currOccupancy = -99;
+
+var currHour = d.getHours();
+var currMin = d.getMinutes();
+var ampm = 'am';
+if (currHour > 12){
+    ampm = 'pm';
+    currHour = currHour - 12;
+} else if (currHour === 0){
+    currHour = 12;
+}
 
 var defaultDay = "Monday";
 if (n === 0) {
@@ -227,6 +240,7 @@ const Week = () => {
                 ]
             })
             if(n === 0){
+                currOccupancy = mondayData[chartIndex]; 
                 setMonChartData({
                     labels: timeLabels,
                     datasets: [
@@ -240,6 +254,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 1){
+                currOccupancy = tuesdayData[chartIndex]; 
                 setTuesChartData({
                     labels: timeLabels,
                     datasets: [
@@ -253,6 +268,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 2){
+                currOccupancy = wednesdayData[chartIndex]; 
                 setWedChartData({
                     labels: timeLabels,
                     datasets: [
@@ -266,6 +282,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 3){
+                currOccupancy = thursdayData[chartIndex]; 
                 setThursChartData({
                     labels: timeLabels,
                     datasets: [
@@ -279,6 +296,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 4){
+                currOccupancy = fridayData[chartIndex]; 
                 setFriChartData({
                     labels: timeLabels,
                     datasets: [
@@ -292,6 +310,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 5){
+                currOccupancy = saturdayData[chartIndex]; 
                 setSatChartData({
                     labels: timeLabels,
                     datasets: [
@@ -305,6 +324,7 @@ const Week = () => {
                     ]
                 })
             } else if(n === 6){
+                currOccupancy = sundayData[chartIndex]; 
                 setSunChartData({
                     labels: timeLabels,
                     datasets: [
@@ -329,6 +349,12 @@ const Week = () => {
         chart()
     }, [])
     return (
+        <>
+            <div>
+                <h1>Date: {currentDay}</h1>   
+                <h2>Current occupancy: {currOccupancy}%</h2>
+                <h6>Current time: {currHour}:{currMin}{ampm}</h6>
+            </div>  
         <Tabs defaultActiveKey={defaultDay}>
             <Tab eventKey="Monday" title="Monday">
                 <Bar data={monChartData} options={{
@@ -478,7 +504,7 @@ const Week = () => {
                 }}/>
             </Tab>
         </Tabs>
-        
+        </>
     )
 }
 
