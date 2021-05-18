@@ -17,7 +17,6 @@ const Home = () => {
 			<li>Bar graph represenation for recreation center occupancy</li>
 			<li>Working navigation bar implementation</li>
 		</ul>
-		<Nav.Link href='/dashboard'>Go to Dashboard</Nav.Link>
 	</div>
 	</>
   );
