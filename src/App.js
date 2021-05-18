@@ -8,6 +8,7 @@ import About from './view/About';
 import Activity from './view/Activity';
 import Hours from './view/Hours';
 import Profile from './view/Profile';
+import Dashboard from './view/Dashboard';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
 					<AppRoute path="/activity" component={Activity} layout={Layout} />
 					<AppRoute path="/hours" component={Hours} layout={Layout} />
 					<AppRoute path="/profile" component={Profile} layout={Layout} />
+					<AppRoute path="/dashboard" component={Dashboard} layout={Layout} />
 				</Switch>
 			</BrowserRouter>
 		</>
