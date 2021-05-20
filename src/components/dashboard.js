@@ -2,6 +2,7 @@ import { Tab, Tabs } from 'react-bootstrap';
 import React, { Component } from 'react';
 import Day from './Day';
 import axios from 'axios';
+import Current from './Current';
 
 const params = new URLSearchParams({ 
     'venue_id': 'ven_5965782d62435251644858524159365f51575f357263394a496843',
@@ -55,34 +56,32 @@ axios.get("https://besttime.app/api/v1/forecasts/week/raw2?" + new URLSearchPara
     .catch(err => {
         console.log(err)
     });
-    console.log();
+
 
 
 
 class Dashboard extends Component {
     state = {  
         days: [
-            { id: 1, data: weekData.mondayData, doy: "Monday", colors: normal, colorBorders: normalBorders },
-            { id: 2, data: weekData.tuesdayData, doy: "Tuesday", colors: normal, colorBorders: normalBorders },
-            { id: 3, data: weekData.wednesdayData, doy: "Wednesday", colors: normal, colorBorders: normalBorders },
-            { id: 4, data: weekData.thursdayData, doy: "Thursday", colors: normal, colorBorders: normalBorders },
-            { id: 5, data: weekData.fridayData, doy: "Friday", colors: normal, colorBorders: normalBorders },
-            { id: 6, data: weekData.saturdayData, doy: "Saturday", colors: normal, colorBorders: normalBorders },
-            { id: 7, data: weekData.sundayData, doy: "Sunday", colors: normal, colorBorders: normalBorders }
+            { id: 1, data: weekData.mondayData, dow: "Monday", colors: normal, colorBorders: normalBorders },
+            { id: 2, data: weekData.tuesdayData, dow: "Tuesday", colors: normal, colorBorders: normalBorders },
+            { id: 3, data: weekData.wednesdayData, dow: "Wednesday", colors: normal, colorBorders: normalBorders },
+            { id: 4, data: weekData.thursdayData, dow: "Thursday", colors: normal, colorBorders: normalBorders },
+            { id: 5, data: weekData.fridayData, dow: "Friday", colors: normal, colorBorders: normalBorders },
+            { id: 6, data: weekData.saturdayData, dow: "Saturday", colors: normal, colorBorders: normalBorders },
+            { id: 7, data: weekData.sundayData, dow: "Sunday", colors: normal, colorBorders: normalBorders }
         ]
     }
 
     render() { 
         return (  
-        <Tabs className='Monitor'>
-                <Tab eventKey={this.state.days[0].doy} title={this.state.days[0].doy}><Day key={this.state.days[0].id} day={this.state.days[0]}/></Tab>
-                <Tab eventKey={this.state.days[1].doy} title={this.state.days[1].doy}><Day key={this.state.days[1].id} day={this.state.days[1]}/></Tab>
-                <Tab eventKey={this.state.days[2].doy} title={this.state.days[2].doy}><Day key={this.state.days[2].id} day={this.state.days[2]}/></Tab>
-                <Tab eventKey={this.state.days[3].doy} title={this.state.days[3].doy}><Day key={this.state.days[3].id} day={this.state.days[3]}/></Tab>
-                <Tab eventKey={this.state.days[4].doy} title={this.state.days[4].doy}><Day key={this.state.days[4].id} day={this.state.days[4]}/></Tab>
-                <Tab eventKey={this.state.days[5].doy} title={this.state.days[5].doy}><Day key={this.state.days[5].id} day={this.state.days[5]}/></Tab>
-                <Tab eventKey={this.state.days[6].doy} title={this.state.days[6].doy}><Day key={this.state.days[6].id} day={this.state.days[6]}/></Tab>
+        <div>
+        <Tabs>
+        { this.state.days.map((day) => 
+                    <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
         </Tabs> 
+        <Current/>
+        </div>
             );
     }
 }
