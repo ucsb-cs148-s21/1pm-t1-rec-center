@@ -30,37 +30,9 @@ let currColorBorders = ['rgba(54, 162, 235)', 'rgba(54, 162, 235)', 'rgba(54, 16
 currColorBorders[chartIndex] = 'rgba(255, 99, 132)';
 
 
-axios.get("https://besttime.app/api/v1/forecasts/week/raw2?" + new URLSearchParams(params)).then(res => {
-        for(const dataObj of res.data.analysis.week_raw[0].day_raw){
-            weekData.mondayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[1].day_raw){
-            weekData.tuesdayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[2].day_raw){
-            weekData.wednesdayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[3].day_raw){
-            weekData.thursdayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[4].day_raw){
-            weekData.fridayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[5].day_raw){
-            weekData.saturdayData.push(parseInt(dataObj))
-        }
-        for(const dataObj of res.data.analysis.week_raw[6].day_raw){
-            weekData.sundayData.push(parseInt(dataObj))
-        }
-    })
-    .catch(err => {
-        console.log(err)
-    });
-
-
-
 
 class Dashboard extends Component {
+
     state = {  
         days: [
             { id: 1, data: weekData.mondayData, dow: "Monday", colors: normal, colorBorders: normalBorders },
@@ -70,10 +42,48 @@ class Dashboard extends Component {
             { id: 5, data: weekData.fridayData, dow: "Friday", colors: normal, colorBorders: normalBorders },
             { id: 6, data: weekData.saturdayData, dow: "Saturday", colors: normal, colorBorders: normalBorders },
             { id: 7, data: weekData.sundayData, dow: "Sunday", colors: normal, colorBorders: normalBorders }
-        ]
+        ],
+        isLoading: true
     }
 
-    render() { 
+    componentDidMount() {
+        console.debug("After mount! Let's load data from API...");
+        axios.get("https://besttime.app/api/v1/forecasts/week/raw2?" + new URLSearchParams(params)).then(res => {
+        for(const dataObj of res.data.analysis.week_raw[0].day_raw){
+            this.state.days[0].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[1].day_raw){
+            this.state.days[1].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[2].day_raw){
+            this.state.days[2].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[3].day_raw){
+            this.state.days[3].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[4].day_raw){
+            this.state.days[4].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[5].day_raw){
+            this.state.days[5].data.push(parseInt(dataObj))
+        }
+        for(const dataObj of res.data.analysis.week_raw[6].day_raw){
+            this.state.days[6].data.push(parseInt(dataObj))
+        }
+        this.setState({ isLoading: false });
+
+    })
+    .catch(err => {
+        console.log(err)
+    });
+    }
+
+    render() {
+        const { isLoading } = this.state.isLoading;
+        console.log(this.state.days)
+        if(isLoading){
+            return <div>Loading...</div>;
+        }
         return (  
         <div>
         <Tabs>
