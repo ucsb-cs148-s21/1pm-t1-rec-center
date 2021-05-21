@@ -9,7 +9,7 @@ Intended users are UCSB students.
     The students should be able to navigate the app easily.
     The users should be authenticated in order to view the schedule tab.
 
-* [Deployment Instructions] (./docs/DEPLOY.md)
+* [Deployment Instructions](./docs/DEPLOY.md)
 
 ## Functionality
 ---
