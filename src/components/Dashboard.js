@@ -2,7 +2,6 @@ import { Tab, Tabs } from 'react-bootstrap';
 import React, { Component } from 'react';
 import Day from './Day';
 import axios from 'axios';
-import Current from './Current';
 
 const params = new URLSearchParams({ 
     'venue_id': 'ven_5965782d62435251644858524159365f51575f357263394a496843',
@@ -90,7 +89,6 @@ class Dashboard extends Component {
         { this.state.days.map((day) => 
                     <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
         </Tabs> 
-        <Current/>
         </div>
             );
     }

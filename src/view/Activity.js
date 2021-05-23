@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dashboard from '../components/dashboard';
+import Dashboard from '../components/Dashboard';
 import './Activity.css'
 
 
