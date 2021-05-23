@@ -1,7 +1,9 @@
-import { Tab, Tabs } from 'react-bootstrap';
+import { Tab, Tabs, Card } from 'react-bootstrap';
 import React, { Component } from 'react';
 import Day from './Day';
 import axios from 'axios';
+import Occupancy from './Occupancy';
+import './Dashboard.css';
 
 const params = new URLSearchParams({ 
     'venue_id': 'ven_5965782d62435251644858524159365f51575f357263394a496843',
@@ -18,7 +20,7 @@ let weekData = {
     sundayData: []
 }
 var d = new Date();
-let currentDay = new Date();
+let currentDay = (d.getDay()+6) % 7;
 var chartIndex = (d.getHours() + 18) % 24;
 
 let normal = ['rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)'];
@@ -34,20 +36,22 @@ class Dashboard extends Component {
 
     state = {  
         days: [
-            { id: 1, data: weekData.mondayData, dow: "Monday", colors: normal, colorBorders: normalBorders },
-            { id: 2, data: weekData.tuesdayData, dow: "Tuesday", colors: normal, colorBorders: normalBorders },
-            { id: 3, data: weekData.wednesdayData, dow: "Wednesday", colors: normal, colorBorders: normalBorders },
-            { id: 4, data: weekData.thursdayData, dow: "Thursday", colors: normal, colorBorders: normalBorders },
-            { id: 5, data: weekData.fridayData, dow: "Friday", colors: normal, colorBorders: normalBorders },
-            { id: 6, data: weekData.saturdayData, dow: "Saturday", colors: normal, colorBorders: normalBorders },
-            { id: 7, data: weekData.sundayData, dow: "Sunday", colors: normal, colorBorders: normalBorders }
+            { id: 0, data: weekData.mondayData, dow: "Monday", colors: normal, colorBorders: normalBorders },
+            { id: 1, data: weekData.tuesdayData, dow: "Tuesday", colors: normal, colorBorders: normalBorders },
+            { id: 2, data: weekData.wednesdayData, dow: "Wednesday", colors: normal, colorBorders: normalBorders },
+            { id: 3, data: weekData.thursdayData, dow: "Thursday", colors: normal, colorBorders: normalBorders },
+            { id: 4, data: weekData.fridayData, dow: "Friday", colors: normal, colorBorders: normalBorders },
+            { id: 5, data: weekData.saturdayData, dow: "Saturday", colors: normal, colorBorders: normalBorders },
+            { id: 6, data: weekData.sundayData, dow: "Sunday", colors: normal, colorBorders: normalBorders }
         ],
+        occupancy: 0,
         isLoading: true
     }
 
     componentDidMount() {
         console.debug("After mount! Let's load data from API...");
         axios.get("https://besttime.app/api/v1/forecasts/week/raw2?" + new URLSearchParams(params)).then(res => {
+        console.log(res.data);
         for(const dataObj of res.data.analysis.week_raw[0].day_raw){
             this.state.days[0].data.push(parseInt(dataObj))
         }
@@ -70,6 +74,9 @@ class Dashboard extends Component {
             this.state.days[6].data.push(parseInt(dataObj))
         }
         this.setState({ isLoading: false });
+        this.setState({ occupancy: this.state.days[currentDay].data[chartIndex] });
+        this.state.days[currentDay].colors = currColor;
+        this.state.days[currentDay].colorBorders = currColorBorders;
 
     })
     .catch(err => {
@@ -79,16 +86,23 @@ class Dashboard extends Component {
 
     render() {
         const { isLoading } = this.state.isLoading;
-        console.log(this.state.days)
+
         if(isLoading){
             return <div>Loading...</div>;
         }
-        return (  
-        <div>
-        <Tabs>
-        { this.state.days.map((day) => 
-                    <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
-        </Tabs> 
+
+        return (
+        <div className='wrapper'>  
+        <div className='activity'>
+                <Tabs>
+                { this.state.days.map((day) => 
+                            <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
+                </Tabs>
+        </div>
+        <div className='occupancy'>
+            <p>Current Activity Level</p>
+            <Occupancy percentage={this.state.occupancy}/>
+        </div>
         </div>
             );
     }

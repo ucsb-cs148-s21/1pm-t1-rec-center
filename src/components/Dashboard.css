@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
+
+.activity {
+    background-color: rgba(240, 240, 240, 0.9);
+    color: black;
+    width: 60%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+.occupancy {
+    background-color: rgba(240, 240, 240, 0.9);
+    color: black;
+    width: 15%;
+    height: 17em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.occupancy p {
+    font-size: 150%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: bolder;
+}
