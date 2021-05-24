@@ -94,7 +94,7 @@ class Dashboard extends Component {
         return (
         <div className='wrapper'>  
         <div className='activity'>
-                <Tabs>
+                <Tabs defaultActiveKey={this.state.days[currentDay].dow}>
                 { this.state.days.map((day) => 
                             <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
                 </Tabs>

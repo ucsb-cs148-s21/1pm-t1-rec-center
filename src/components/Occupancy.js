@@ -8,7 +8,7 @@ class Occupancy extends Component {
     render() { 
         return (
             <div style={{ width: 200, height: 200 }}>
-                <CircularProgressbarWithChildren value={50} styles={{
+                <CircularProgressbarWithChildren value={this.props.percentage} styles={{
                     path:{
                         stroke: '#4B76E4',
                         transition: 'stroke-dashoffset 0.5s ease 0s',
@@ -18,7 +18,7 @@ class Occupancy extends Component {
                         strokeLinecap: 'butt',
                       },
                     }}>
-                    <p className='percentage'>{this.props.percentage}%</p>
+                    <p id='percentage'>{this.props.percentage}%</p>
                 </CircularProgressbarWithChildren>
             </div>
         );
