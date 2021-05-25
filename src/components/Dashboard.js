@@ -19,6 +19,8 @@ let weekData = {
     saturdayData: [],
     sundayData: []
 }
+
+let updatedDays;
 var d = new Date();
 let currentDay = (d.getDay()+6) % 7;
 var chartIndex = (d.getHours() + 18) % 24;
@@ -73,10 +75,13 @@ class Dashboard extends Component {
         for(const dataObj of res.data.analysis.week_raw[6].day_raw){
             this.state.days[6].data.push(parseInt(dataObj))
         }
+        updatedDays = this.state.days;
+        updatedDays[currentDay].colors = currColor;
+        updatedDays[currentDay].colorBorders = currColorBorders;
         this.setState({ isLoading: false });
         this.setState({ occupancy: this.state.days[currentDay].data[chartIndex] });
-        this.state.days[currentDay].colors = currColor;
-        this.state.days[currentDay].colorBorders = currColorBorders;
+        this.setState({ days: updatedDays });
+
 
     })
     .catch(err => {
@@ -101,7 +106,7 @@ class Dashboard extends Component {
         </div>
         <div className='occupancy'>
             <p>Current Activity Level</p>
-            <Occupancy percentage={this.state.occupancy}/>
+            <Occupancy className='cirProg' percentage={this.state.occupancy}/>
         </div>
         </div>
             );
