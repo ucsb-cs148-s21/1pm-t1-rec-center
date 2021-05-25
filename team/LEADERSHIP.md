@@ -19,6 +19,7 @@
 | Thurs 05/13| Alejandro Rojas Rodriguez | Led Leadership meeting |
 | Tues 05/18| Billy Wu | Led daily scrum meeting |
 | Thurs 05/20| Andy Ho | Led daily scrum meeting |
+| Tuess 05/25| Alejandro Rojas Rodriguez | Led retrospective meeting |
 
 
 | Position      | Name              | 
