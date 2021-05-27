@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Day from './Day';
 import axios from 'axios';
 import Occupancy from './Occupancy';
+import Weather from './Weather';
 import './Dashboard.css';
 
 const params = new URLSearchParams({ 
@@ -98,16 +99,27 @@ class Dashboard extends Component {
 
         return (
         <div className='wrapper'>  
-        <div className='activity'>
-                <Tabs defaultActiveKey={this.state.days[currentDay].dow}>
-                { this.state.days.map((day) => 
-                            <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
-                </Tabs>
-        </div>
-        <div className='occupancy'>
-            <p>Current Activity Level</p>
-            <Occupancy className='cirProg' percentage={this.state.occupancy}/>
-        </div>
+            <div className="left-container">
+                <div className='activity'>
+                            <Tabs defaultActiveKey={this.state.days[currentDay].dow}>
+                            { this.state.days.map((day) => 
+                                        <Tab key={day.id} eventKey={day.dow} title={day.dow}><Day key={day.id} day={day}/></Tab>)} 
+                            </Tabs>
+                </div>
+            </div>
+            <div className="right-container">
+                <div className="half-containers">
+                    <div className='occupancy'>
+                        <p>Current Activity Level</p>
+                        <Occupancy className='cirProg' percentage={this.state.occupancy}/>
+                    </div>
+                </div>
+                <div className="half-containers">
+                    <div className='weather'>
+                        <Weather />
+                    </div>
+                </div>                
+            </div>            
         </div>
             );
     }
