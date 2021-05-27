@@ -39,7 +39,7 @@ yarn build
   ```
   REACT_APP_AUTH_CLIENT_ID = <INSERT GOOGLE AUTH CLIENT ID HERE>
   ```
-  -Go to the following link as an example
+  - Go to the following link as an example
   * [EXAMPLE](https://github.com/ucsb-cs148-s21/1pm-t1-rec-center/blob/main/.env.SAMPLE)
 
 ### Deploy
