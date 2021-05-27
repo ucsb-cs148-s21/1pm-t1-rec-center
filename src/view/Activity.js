@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import Day from './../components/Day';
-import { Card } from 'react-bootstrap';
-// import { CardGroup } from 'react-bootstrap';
-import './Activity.css'
+import Dashboard from '../components/Dashboard';
+import './Activity.css';
 
-
+var date = new Date();
+var optionsWeekDay = { weekday: 'long'};
+var optionsMonth = { month: 'long' };
+let day = new Intl.DateTimeFormat('en-US', optionsWeekDay).format(date)
+let dayOfMonth = date.getDate();
+let month = new Intl.DateTimeFormat('en-US', optionsMonth).format(date)
+let year = date.getFullYear();
 
 class Activity extends Component {
     state = {  }
@@ -13,13 +17,8 @@ class Activity extends Component {
         currentDay = currentDay.toDateString();
         return (
             <div className='App-header animate__animated animate__fast animate__fadeIn'>
-                <h1>Recreation Center Activity</h1>
-                    <Card className='card' text='black' bg="rgba(240, 240, 240, 0.9)">
-                    <Card.Title><h3>Forecast for {currentDay}</h3></Card.Title>
-                        <Card.Body>
-                            <Day />
-                        </Card.Body>
-                    </Card>
+                <h1>{day}, {dayOfMonth} {month} {year}</h1>
+                    <Dashboard/>
             </div>
         );
     }

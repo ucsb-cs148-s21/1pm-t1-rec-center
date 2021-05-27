@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
+
+.nav{
+    background-color: white;
+}
+
+.link {
+    font-weight: 900;
+    color: black;  
+}
 
 .link:hover {
     background-color: rgba(240, 240, 240, 0.6);
     border-radius: 10px;  
-    color: black;  
-}
-
-.link {
-    font-weight: bolder;
 }
 
 .topPart {
     height: 40px;
+    background-color: white;
+    font-size: 1.15em;
 }
