@@ -17,19 +17,13 @@
 ```
 git clone https://github.com/ucsb-cs148-s21/1pm-t1-rec-center.git
 ```
-- Install `Flask` and `Python-dotenv`, you can also setup a virtual environment
+- Install `npm` modules
 ```
-pip install flask python-dotenv
-```
-- For virtual environment, do these before you run the above command
-```
-python -m venv venv
-venv/bin/activate (Linux)
-venv/Scripts/activate (Windows)
+npm install
 ```
 - Install packages and dependencies, build the app
 ```
-npm build
+npm run build
 ```
 or
 ```
@@ -38,17 +32,9 @@ yarn build
 
 ### Deploy
 
-- Run the following from the repo's home directory
-```
-npm start-api
-```
-or
-```
-yarn start-api
-```
 - Run the following from the same path but from another terminal (simultaneously)
 ```
-npm start
+npm run start
 ```
 or
 ```
