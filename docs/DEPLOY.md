@@ -35,6 +35,8 @@ yarn build
   ```
   REACT_APP_AUTH_CLIENT_ID = <INSERT GOOGLE AUTH CLIENT ID HERE>
   ```
+  -Go to the following link as an example
+  * [Deployment Instructions](./.env.SAMPLE)
 
 ### Deploy
 
