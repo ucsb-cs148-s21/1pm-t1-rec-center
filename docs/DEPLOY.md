@@ -36,7 +36,7 @@ or
 yarn build
 ```
 
-### Launch
+### Deploy
 
 - Run the following from the repo's home directory
 ```
