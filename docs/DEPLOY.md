@@ -17,6 +17,10 @@
 ```
 git clone https://github.com/ucsb-cs148-s21/1pm-t1-rec-center.git
 ```
+- Change directory to 1pm-t1-rec-center folder that was created from git clone
+```
+cd 1pm-t1-rec-center
+```
 - Install `npm` modules
 ```
 npm install
