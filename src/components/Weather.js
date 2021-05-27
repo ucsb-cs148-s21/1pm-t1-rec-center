@@ -24,10 +24,10 @@ class Weather extends Component {
     render() { 
         return (
             <div>
-                Current weather: {weather}
+                Current Weather: {weather}
                 <img 
                     src={urlFirst + icon + urlSecond} 
-                    alt="new" 
+                    alt="weather icon" 
                 />
             </div>
         )
