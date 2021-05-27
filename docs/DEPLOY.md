@@ -29,6 +29,12 @@ or
 ```
 yarn build
 ```
+- To access full functionality of the web application
+  - Create a .env file 
+  - Inside the .env file write
+  ```
+  REACT_APP_AUTH_CLIENT_ID = <INSERT GOOGLE AUTH CLIENT ID HERE>
+  ```
 
 ### Deploy
 
