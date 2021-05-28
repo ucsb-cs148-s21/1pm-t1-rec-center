@@ -53,3 +53,8 @@ or
 yarn start
 ```
 You should be able to see the app now.
+
+### Deployment Instruction Video
+- Click on the following link to go the deployment instruction video
+  * [VIDEO](https://github.com/ucsb-cs148-s21/1pm-t1-rec-center/blob/main/docs/DeploymentVideo.mp4)
+- Then, click on the "View raw" link to download the deployment instruction video and watch it
