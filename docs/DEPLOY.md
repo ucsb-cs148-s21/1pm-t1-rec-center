@@ -42,9 +42,9 @@ yarn build
   - Go to the following link as an example
     * [EXAMPLE](https://github.com/ucsb-cs148-s21/1pm-t1-rec-center/blob/main/.env.SAMPLE)
 
-### Deploy
+### Local Deployment
 
-- Run the following from the same path but from another terminal (simultaneously)
+- Run the following 
 ```
 npm run start
 ```
@@ -53,6 +53,10 @@ or
 yarn start
 ```
 You should be able to see the app now.
+
+## Global Deployment
+- Upload code to new github repo.
+- Use Heroku to deploy that new github repo.
 
 ### Deployment Instruction Video
 - Click on the following link to go the deployment instruction video
