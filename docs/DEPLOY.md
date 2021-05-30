@@ -59,6 +59,5 @@ You should be able to see the app now.
 - Use Heroku to deploy that new github repo.
 
 ### Deployment Instruction Video
-- Click on the following link to go the deployment instruction video
-  * [Deployment Instruction Video](https://github.com/ucsb-cs148-s21/1pm-t1-rec-center/blob/main/docs/DeploymentVideo.mp4)
-- Then, click on the "View raw" link to download the deployment instruction video and watch it
+- Click on the following link to watch the deployment instruction video
+  * [Deployment Instruction Video](https://youtu.be/1SzB5J0oFyI)
