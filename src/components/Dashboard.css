@@ -3,8 +3,6 @@
 .activity {
     background-color: rgba(240, 240, 240, 0.9);
     color: black;
-    /* width: 60%;
-    height: 60%; */
     border-radius: 20px;
 }
 .wrapper {
@@ -31,9 +29,9 @@
 
 .half-containers {
     flex: 1;
-    /* overflow: auto; */
-    /* background-color: rgba(240, 240, 240, 0.9);
-    color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .wrapper div {
@@ -41,22 +39,10 @@
 }
 
 .occupancy {
-    /* background-color: rgba(240, 240, 240, 0.9);
-    color: black; */
-    /* width: 20em;
-    height: 20em; */
-    /* margin-left: auto;
-    margin-right: auto; */
     border-radius: 20px;
-    /* display: flex; */
-    /* align-items: center; */
-    justify-content: center;
 }
 
-.cirProg{
-    padding-left: 12px;
-    margin-left: 12px;
-}
+
 .occupancy p {
     font-size: 150%;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -69,26 +55,34 @@
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: bolder;
     font-size: 125%;
+    border: 0px;
+
 }
 
 .nav-tabs .nav-link:hover {
     background-color: rgba(240, 240, 240, 0.9);
-}
-
-.nav-tabs .nav-link:focus {
-    background-color: black;
+    border-radius: 20px;
+    border: 0px;
 }
 
 .nav-tabs {
+    background-color: #edeeef;
     border-radius: 20px;
+    border: 0px;
+    border-bottom: 0px!important;
+}
+
+.nav-tabs a.nav-link.active{
+    background-color:#edeeef;
+    border-width: 0px;
+    border-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: gold;
 }
 
 .weather {
-    /* width: 20em;
-    height: 20em; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* border-radius: 20px; */
+    margin-top: 100 px;
     text-align: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: bolder;

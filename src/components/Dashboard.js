@@ -111,7 +111,7 @@ class Dashboard extends Component {
                 <div className="half-containers">
                     <div className='occupancy'>
                         <p>Current Activity Level</p>
-                        <Occupancy className='cirProg' percentage={this.state.occupancy}/>
+                        <Occupancy percentage={this.state.occupancy}/>
                     </div>
                 </div>
                 <div className="half-containers">
