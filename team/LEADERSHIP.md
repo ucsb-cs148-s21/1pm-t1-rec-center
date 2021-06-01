@@ -21,6 +21,7 @@
 | Thurs 05/20| Andy Ho | Led daily scrum meeting |
 | Tues 05/25| Alejandro Rojas Rodriguez | Led retrospective meeting |
 | Thurs 05/27| Bryan Xu | Led daily scrum meeting |
+| Tues 06/01| Alejandro Rojas Rodriguez | Led daily scrum meeting   |
 
 
 | Position      | Name              | 
