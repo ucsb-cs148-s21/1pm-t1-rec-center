@@ -20,8 +20,8 @@ Intended users are UCSB students.
 
 ## Known Problems
 ---
-None at the moment
-
+- API keys have a limited number of uses until they must be manually renewed
+- several API keys are public in our repository, and this was a team-wide decision because there poses little risk. This is susceptible to API changes made by Google Calendar, which would require manual updating from our end
 
 ## members
 
