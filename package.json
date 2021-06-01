@@ -10,6 +10,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "chart.js": "^3.1.1",
+    "googleapis": "^74.2.0",
+    "http2": "^3.3.7",
     "npx": "^10.2.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",

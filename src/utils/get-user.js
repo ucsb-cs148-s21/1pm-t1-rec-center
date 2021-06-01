@@ -2,7 +2,7 @@ const getUser = () => {
 	if (!window.gapi) {
 		return null;
 	}
-
+	
 	const authInstance = window.gapi.auth2.getAuthInstance();
 	const isSignedIn = authInstance.isSignedIn.get();
 
