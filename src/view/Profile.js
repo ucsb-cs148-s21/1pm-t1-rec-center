@@ -13,32 +13,32 @@ const Profile = () => {
   const listUpcomingEvents = () => {
 	console.log(window.gapi.client);
 	window.gapi.client.load('calendar', 'v3', () => {
-	window.gapi.client.calendar.events.list({
-	  'calendarId': 'primary',
-	  'timeMin': (new Date()).toISOString(),
-	  'showDeleted': false,
-	  'singleEvents': true,
-	  'maxResults': 10,
-	  'orderBy': 'startTime'
-	}).then(function(response) {
-	  var events = response.result.items;
-	  appendPre('Upcoming events:');
+		window.gapi.client.calendar.events.list({
+		  'calendarId': 'primary',
+		  'timeMin': (new Date()).toISOString(),
+		  'showDeleted': false,
+		  'singleEvents': true,
+		  'maxResults': 10,
+		  'orderBy': 'startTime'
+		}).then(function(response) {
+		  var events = response.result.items;
+		  console.log(events);
+		  appendPre('Upcoming events:');
 
-	  if (events.length > 0) {
-		for (var i = 0; i < events.length; i++) {
-		  var event = events[i];
-		  var when = event.start.dateTime;
-		  if (!when) {
-			when = event.start.date;
+		  if (events.length > 0) {
+			for (var i = 0; i < events.length; i++) {
+			  var event = events[i];
+			  var when = event.start.dateTime;
+			  if (!when) {
+				when = event.start.date;
+			  }
+			  appendPre(event.summary + ' (' + when + ')')
+			}
+		  } else {
+			appendPre('No upcoming events found.');
 		  }
-		  appendPre(event.summary + ' (' + when + ')')
-		}
-	  } else {
-		appendPre('No upcoming events found.');
-	  }
+		});
 	});
-	});
-	
   };
 
   return (
@@ -46,6 +46,7 @@ const Profile = () => {
 		<h1>This is your profile page</h1>
 		<pre>{JSON.stringify(user, null, "\t")}</pre>
 		<button onClick={listUpcomingEvents}>show calendar</button>
+		<pre id="content"></pre>
 	</div>
   );
 }

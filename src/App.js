@@ -33,35 +33,24 @@ const App = () => {
 			  clientId: CLIENT_ID,
 			  discoveryDocs: DISCOVERY_DOCS,
 			  scope: SCOPES
-			}).then(function () {
-			  console.log(2);
-			  const authInstance = window.gapi.auth2.getAuthInstance();
-			  const isSignedIn = authInstance.isSignedIn.get();
-			  setIsSignedIn(isSignedIn);
-
-			  authInstance.isSignedIn.listen((isSignedIn) => {
-				setIsSignedIn(isSignedIn);
-			  });
-			}, function(error) {
-			  appendPre(JSON.stringify(error, null, 2));
 			});
+			window.gapi.client.load('calendar', 'v3', () => console.log('loaded calendar'));
 			const authInstance = window.gapi.auth2.getAuthInstance();
 			const isSignedIn = authInstance.isSignedIn.get();
 			setIsSignedIn(isSignedIn);
-
-			authInstance.isSignedIn.listen((isSignedIn) => {
-			  setIsSignedIn(isSignedIn);
-			});
+			
+			authInstance.isSignedIn.listen(updateSigninStatus);
 		});
+		
 	}
 	
-	function appendPre(message) {
-		var pre = document.getElementById('content');
-		var textContent = document.createTextNode(message + '\n');
-		pre.appendChild(textContent);
+	function updateSigninStatus(isSignedIn) {
+		setIsSignedIn(isSignedIn);
+		if(isSignedIn) {
+			console.log(window.gapi.client);
+			//listUpcomingEvents();
+		}
 	}
-	
-	function updateSigninStatus() {}
 	
 	/*
 	function initGoogleSignIn() {
