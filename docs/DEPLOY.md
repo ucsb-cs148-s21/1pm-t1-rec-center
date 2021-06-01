@@ -37,7 +37,8 @@ yarn build
   - Create a .env file 
   - Inside the .env file write
   ```
-  REACT_APP_AUTH_CLIENT_ID = <INSERT GOOGLE AUTH CLIENT ID HERE>
+  REACT_APP_AUTH_CLIENT_ID = 947923965525-p9pdhdbfa5oc9m4vfrql1mvcrl47jjga.apps.googleusercontent.com
+  REACT_APP_API_KEY = AIzaSyAAn2t2OBohpgFZI-eHqkDBJ3lPtferank
   ```
   - Go to the following link as an example
     * [EXAMPLE](https://github.com/ucsb-cs148-s21/1pm-t1-rec-center/blob/main/.env.SAMPLE)
