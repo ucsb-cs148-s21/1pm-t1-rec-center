@@ -46,3 +46,16 @@ None at the moment
 - Product Manager: Andy Ho
 - Scrum Master: Bryan Xu
 - Scrum Members: Alejandro Rodriguez, Billy Wu, Silvia Yu
+
+## implementation effort
+- implementation largely fueled by periodic sprint planning meetings, where we talked about what goals we'd like to achieve as a team, and distribute the work accorindgly
+- during the first sprint, we were planning on the implementation details for the mvp, which included just the basic "day" view of the rec cen
+- at this point, we also put in some other basic functionalities, such as a page containing information about our group and a page containing information about the rec cen hours of operation
+- in order to make it all complete, we wrapped up the functionality using a navbar that was native to React, react-router
+- during the second sprint, we wanted to make the view of the occupancy level more accessible, so we moved it to the home page, and also added small changes to improve its easy of use
+- we added a functionality that informed the user of the current occupancy level, the current day and time, and a visual indicator of the occupancy level compared to the rest of the day
+- we also started experimenting with logging in with Google Authentication, where users will be able to upload their google calendar to work with our web application (coming in an upcoming update)
+- for the third sprint, we focused once again on improved the occupancy level display and UI, as it was the main component of our program
+- we learned to use props to efficiently create the entire week view at once, and changed the css to make the formatting of the page look better
+- we also added functionality by displaying the occupancy level in a circle graph and we also display the current temperature and weather as well
+- overall, this last sprint has been focused on improving the UI and to make it more useful to the average student
