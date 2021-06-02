@@ -61,33 +61,33 @@ Intended users are UCSB students.
 - overall, this last sprint has been focused on improving the UI and to make it more useful to the average student
 
 ## repository structure
-1pm-t1-rec-center/
-    └── src/
-        ├── components/
-        │   ├── Dashboard.css
-        │   ├── Dashboard.js
-        │   ├── Day.js
-        │   ├── Layout.js
-        │   ├── NavBar.css
-        │   ├── NavBar.js
-        │   ├── NavBar.test.js
-        │   ├── Occupancy.css
-        │   ├── Occupancy.js
-        │   ├── Weather.js
-        │   └── Week.js
-        ├── utils/
-        │   ├── AppRoute.js
-        │   └── get-user.js
-        ├── view/
-        │   ├── About.css
-        │   ├── About.js
-        │   ├── Activity.css
-        │   ├── Activity.js
-        │   ├── Home.css
-        │   ├── Home.js
-        │   ├── Hours.css
-        │   ├── Hours.js
-        │   └── Profile.js
-        ├── App.css
-        ├── App.js
-        └── App.test.js
+1pm-t1-rec-center    
+└── src    
+    ├── components    
+    │   ├── Dashboard.css    
+    │   ├── Dashboard.js    
+    │   ├── Day.js    
+    │   ├── Layout.js    
+    │   ├── NavBar.css    
+    │   ├── NavBar.js    
+    │   ├── NavBar.test.js    
+    │   ├── Occupancy.css    
+    │   ├── Occupancy.js    
+    │   ├── Weather.js    
+    │   └── Week.js    
+    ├── utils    
+    │   ├── AppRoute.js    
+    │   └── get-user.js    
+    ├── view    
+    │   ├── About.css    
+    │   ├── About.js    
+    │   ├── Activity.css    
+    │   ├── Activity.js    
+    │   ├── Home.css    
+    │   ├── Home.js    
+    │   ├── Hours.css    
+    │   ├── Hours.js    
+    │   └── Profile.js    
+    ├── App.css    
+    ├── App.js    
+    └── App.test.js    
