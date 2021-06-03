@@ -22,6 +22,7 @@
 | Tues 05/25| Alejandro Rojas Rodriguez | Led retrospective meeting |
 | Thurs 05/27| Bryan Xu | Led daily scrum meeting |
 | Tues 06/01| Alejandro Rojas Rodriguez | Led daily scrum meeting   |
+| Thurs 06/03| Bryan Xu | Led final presentation planning |
 
 
 | Position      | Name              | 
