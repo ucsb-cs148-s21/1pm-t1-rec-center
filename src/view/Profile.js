@@ -1,14 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import getUser from '../utils/get-user';
-import { format, subHours, startOfMonth } from 'date-fns';
-import {
-  MonthlyBody,
-  MonthlyDay,
-  MonthlyCalendar,
-  MonthlyNav,
-  DefaultMonthlyEventItem,
-} from '@zach.codes/react-calendar';
-import '@zach.codes/react-calendar/dist/calendar-tailwind.css';
 
 const Profile = () => {
   const user = getUser();
@@ -19,6 +10,13 @@ const Profile = () => {
 	var pre = document.getElementById('content');
 	var textContent = document.createTextNode(message + '\n');
 	pre.appendChild(textContent);
+  }
+  
+  function clearPre() {
+	var pre = document.getElementById('content');
+	while (pre.firstChild) {
+		pre.removeChild(pre.firstChild);
+	}
   }
   
   var API_KEY = process.env.REACT_APP_API_KEY;
@@ -43,7 +41,8 @@ const Profile = () => {
 		}).then(function(response) {
 		  var events = response.result.items;
 		  console.log(events);
-		  //appendPre('Upcoming events:');
+		  clearPre();
+		  appendPre('Upcoming events:');
 
 		  if (events.length > 0) {
 			for (var i = 0; i < events.length; i++) {
@@ -52,12 +51,12 @@ const Profile = () => {
 			  if (!when) {
 				when = event.start.date;
 			  }
-			  //appendPre(event.summary + ' (' + when + ')')
+			  appendPre(event.summary + ' (' + when + ')')
 			  events[i].title = event.summary;
 			  events[i].date = when;
 			}
 		  } else {
-			//appendPre('No upcoming events found.');
+			appendPre('No upcoming events found.');
 		  }
 		  console.log(events);
 		});
@@ -66,29 +65,13 @@ const Profile = () => {
 
   return (
 	  <>
-		<div className="profile" data-testid="profile"> 
+		<div className="profile hours animate__animated animate__slower animate__fadeIn" data-testid="profile"> 
 			<h1>Calendar</h1>
-			<button onClick={listUpcomingEvents}>update calendar</button>
-			<pre id="content"></pre>
+			<div>
+				<button onClick={listUpcomingEvents}>Show events</button>
+				<pre id="content"></pre>
+			</div>
 		</div>
-		<MonthlyCalendar currentMonth={currentMonth} 
-		  onCurrentMonthChange={date => setCurrentMonth(date)}>
-		  <MonthlyNav />
-		  <MonthlyBody events={events}>
-		    <MonthlyDay
-			  renderDay={data =>
-			    data.map((item, index) => (
-			      <DefaultMonthlyEventItem
-				    key={index}
-				    title={item.title}
-				    // Format the date here to be in the format you prefer
-				    date={format(item.date, 'k:mm')}
-				  />
-			    ))
-			  }
-		    />
-		  </MonthlyBody>
-	    </MonthlyCalendar>
 	  </>
   );
 }
