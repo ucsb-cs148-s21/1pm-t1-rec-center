@@ -8,7 +8,7 @@ import './Dashboard.css';
 
 const params = new URLSearchParams({ 
     'venue_id': 'ven_5965782d62435251644858524159365f51575f357263394a496843',
-    'api_key_public': 'pub_8f98ec4cd25a4f62a7bd82f0722c15a8',
+    'api_key_public': 'pub_a89179919e5b4679a2e9f9ea45ec7327',
 });
 
 let weekData = {
