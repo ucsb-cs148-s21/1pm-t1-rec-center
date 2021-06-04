@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import getUser from '../utils/get-user';
 import { format, subHours, startOfMonth } from 'date-fns';
+import "./Profile.css"
 import {
   MonthlyBody,
   MonthlyDay,
@@ -85,10 +86,11 @@ const Profile = () => {
 		<div className="profile " data-testid="profile"> 
 			<h1>Calendar</h1>
 			<div>
-				<button onClick={listUpcomingEvents}>update calendar</button>
+				<button className="load" onClick={listUpcomingEvents}>Load Calendar</button>
 				<pre id="content"></pre>
 			</div>
 		</div>
+		<div className="calendar">
 		<MonthlyCalendar currentMonth={currentMonth} 
 		  onCurrentMonthChange={date => setCurrentMonth(date)}>
 		  <MonthlyNav />
@@ -107,6 +109,7 @@ const Profile = () => {
 		    />
 		  </MonthlyBody>
 	    </MonthlyCalendar>
+		</div>
 	  </>
   );
 }

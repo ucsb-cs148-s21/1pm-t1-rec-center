@@ -1,0 +1,46 @@
+.flex.justify-end.mb-4 {
+    justify-content: center;
+}
+
+.ml-4.mr-4.w-32.text-center {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.cursor-pointer {
+    width: 5em;
+    height: 3em;
+    font-weight: bold;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 5px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile h1 {
+    padding-top: 2%;
+    font-weight: bolder;
+}
+
+.load {
+    background-color: #4B76E4;
+    height: 2em;
+    width: 8em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+
+.calendar {
+    width: 90%; 
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.font-medium {
+    font-size: 1.25em;
+}

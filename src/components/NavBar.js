@@ -37,11 +37,11 @@ const NavBar = (props) => {
 					title={
 						<span>
 							Hello, {user.kV}{" "}
-							<img
+							{/* <img
 								src={user.ZJ}
 								alt="profile"
 								style={{ width: "24px", height: "24px" }}
-							/>{" "}
+							/>{" "} */}
 						</span>
 					}
 					id="basic-nav-dropdown"
