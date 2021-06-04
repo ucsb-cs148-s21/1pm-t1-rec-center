@@ -20,6 +20,39 @@ const App = () => {
 		document.body.appendChild(script);
 	}, []);
 	
+	var CLIENT_ID = process.env.REACT_APP_AUTH_CLIENT_ID;
+    var API_KEY = process.env.REACT_APP_API_KEY;
+    var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+    var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+	
+	function initGoogleSignIn() {
+		window.gapi.load('client:auth2', () => {
+			console.log('loaded client');
+			window.gapi.client.init({
+			  apiKey: API_KEY,
+			  clientId: CLIENT_ID,
+			  discoveryDocs: DISCOVERY_DOCS,
+			  scope: SCOPES
+			});
+			window.gapi.client.load('calendar', 'v3', () => console.log('loaded calendar'));
+			const authInstance = window.gapi.auth2.getAuthInstance();
+			const isSignedIn = authInstance.isSignedIn.get();
+			setIsSignedIn(isSignedIn);
+			
+			authInstance.isSignedIn.listen(updateSigninStatus);
+		});
+		
+	}
+	
+	function updateSigninStatus(isSignedIn) {
+		setIsSignedIn(isSignedIn);
+		if(isSignedIn) {
+			console.log(window.gapi.client);
+			//listUpcomingEvents();
+		}
+	}
+	
+	/*
 	function initGoogleSignIn() {
 		window.gapi.load("auth2", () => {
 			window.gapi.auth2
@@ -37,7 +70,8 @@ const App = () => {
 				});
 		});
 	}
-  
+	*/
+	
 	return (
 		<>
 			<BrowserRouter>
