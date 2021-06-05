@@ -8,8 +8,9 @@ Intended users are UCSB students.
     The students should be able to access the opening hours for the Rec Cen.
     The students should be able to navigate the app easily.
     The users should be authenticated in order to view the schedule tab.
+## [Final Presentation](https://youtu.be/wYMrnQZmpT8)
 
-* [Deployment Instructions](./docs/DEPLOY.md)
+## [Deployment Instructions](./docs/DEPLOY.md)
 
 ## Functionality
 ---
