@@ -92,3 +92,8 @@ Intended users are UCSB students.
     ├── App.css    
     ├── App.js    
     └── App.test.js    
+    
+## Final Materials
+- [Final Presentation](https://youtu.be/wYMrnQZmpT8)
+- [Deployment Instructions](./docs/DEPLOY.md)
+- [User Manual](./docs/MANUAL.md)
